@@ -3,15 +3,57 @@
 // ==========================================
 let allProjects = [];
 
+const fallbackProjects = [
+  {
+    "id": "crisp-tool",
+    "title": "CRISP Tool \u2013 SCP Digitalization",
+    "category": "Digital Transformation",
+    "summary": "A system-driven, integrated digital platform that automates Price Change Calculation (PCR) and Sales, Controlling & Planning (SCP) workflows, bringing transparency, consistency, and governance to contract management.",
+    "impact": "100% traceability of price & volume changes | Eliminated Excel-based processes",
+    "period": "2023 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "CMD and SCP processes for price change calculation (PCR) and volume planning were managed through manual, Excel-based workflows. This led to limited end-to-end visibility across Contracts, Plans (TBP/CF), and Actuals, high manual effort and dependency on individual knowledge, inconsistent and non-repeatable PCR and volume calculations, delays in TBP and CF cycles, and limited auditability and explainability of price and volume deviations.",
+    "solution": "CRISP is a system-driven, integrated digital platform that automates PCR and SCP workflows. It introduces a structured Plan vs Actual explanation framework (Target Cross) to clearly separate and explain price and volume deviations. The platform enables seamless traceability across the value chain: Contracts (Quotation, LOI, PO) \u2192 Plan (TBP, CF) \u2192 Actuals (YEC, POE billing prices).",
+    "modules": [
+      { "name": "MDM", "description": "Add/Update Master Data \u2013 centralized management of all master data entities" },
+      { "name": "Parts", "description": "Customer Code, Import Content, Materials, Energy, Discounts (Volume / Year-on-Year / Combined bands), Contracts (Read-Only)" },
+      { "name": "Contracts", "description": "Engine Model, Parts, Forex, RMI, Energy \u2014 each with Contract Conditions, Category Threshold/Burden Share, Base Rates & Source; Expected Engine Volumes (Yearly); Reference Document Uploads; Other Contractual Conditions" },
+      { "name": "Purchase Orders", "description": "Full CRUD operations for managing purchase orders end-to-end" },
+      { "name": "Reconciliations", "description": "Rates (Forex, Material, Energy), Schedules, Parts with Approval Workflow (Pending Approvals \u2192 Pending PO \u2192 Pending GPM \u2192 History)" },
+      { "name": "Forecasting", "description": "Schedules (CF Cycles/Year) with View/Update, CF Cycles with Manual Override, Download Price Forecasting Excel" }
+    ],
+    "technologies": ["Python", "Power BI", "Power Automate", "Azure", "Data Analytics"],
+    "users": "Sales KAMs, SCP-IN team, PS-IN/RGB, rBUs, CTG-IN",
+    "results": [
+      "Digitized and automated end-to-end CMD and SCP workflows, eliminating manual Excel-based processes",
+      "Seamless traceability across the value chain: Contracts (Quotation, LOI, PO) \u2192 Plan (TBP, CF) \u2192 Actuals (YEC, POE billing prices)",
+      "System-driven PCR and volume forecast calculations ensuring consistency and accuracy",
+      "Clear ownership and accountability for pricing, planning, and volume data",
+      "Improved forecast accuracy and faster decision-making through reliable, timely, and explainable insights",
+      "Reduced planning cycle times and manual effort across TBP and CF cycles"
+    ],
+    "successCriteria": [
+      "100% traceability of price and volume changes across Contracts, Plans, Bottom Line, and Actuals",
+      "Consistent, explainable, and auditable PCR calculations with full audit trails",
+      "Measurable improvement in productivity and efficiency driven by reduced manual effort and cycle times",
+      "Improved forecast accuracy across TBP and CF cycles with stronger alignment to Actuals",
+      "High adoption and sustained usage of CRISP by CMD and SCP teams",
+      "Single, trusted version of Target Cross outputs used for reviews and decision-making"
+    ]
+  }
+];
+
 async function loadProjects() {
   try {
     const response = await fetch('projects.json');
+    if (!response.ok) throw new Error('Fetch failed');
     allProjects = await response.json();
-    renderFilters();
-    renderProjects(allProjects);
   } catch (error) {
-    console.error('Failed to load projects:', error);
+    console.warn('Falling back to embedded project data:', error.message);
+    allProjects = fallbackProjects;
   }
+  renderFilters();
+  renderProjects(allProjects);
 }
 
 // ==========================================
