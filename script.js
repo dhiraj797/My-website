@@ -40,6 +40,33 @@ const fallbackProjects = [
       "High adoption and sustained usage of CRISP by CMD and SCP teams",
       "Single, trusted version of Target Cross outputs used for reviews and decision-making"
     ]
+  },
+  {
+    "id": "ecu-diagnosis-assist",
+    "title": "MSIL \u2013 ECU Diagnosis Assist",
+    "category": "AI",
+    "summary": "AI-assisted diagnostic platform that transforms physical, reactive warranty investigations into a digital, data-driven process \u2014 enabling faster, more accurate, and standardized claim decisions.",
+    "impact": "Investigation time: Days \u2192 Minutes | NTF reduction: 30\u201340%",
+    "period": "2024 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "Current warranty and quality investigations are parts-return driven, manual, and time-consuming, resulting in long investigation cycles (days/weeks), unnecessary parts replacement and logistics cost, high dealer dependency and variability in diagnosis quality, and limited use of available vehicle, diagnostic, and field data.",
+    "solution": "ECU Diagnosis Assist transforms physical, reactive investigations into a digital, data-driven, AI-assisted diagnostic process. It enables faster, more accurate, and standardized claim decisions by leveraging AI-guided diagnostics to identify defect vs. non-defect cases, reducing unnecessary part returns and NTF (No Trouble Found) cases.",
+    "technologies": ["AI", "Machine Learning", "Data Analytics", "Python"],
+    "users": "Dealers / Service Technicians, MSIL Warranty & Claims Teams, Customer Quality Teams",
+    "results": [
+      "Reduce end-to-end investigation time from days to minutes",
+      "Enable AI-guided dealer diagnostics to identify defect vs. non-defect cases",
+      "Reduce unnecessary part returns and NTF (No Trouble Found) cases",
+      "Improve claim accuracy, consistency, and customer satisfaction",
+      "Build a scalable foundation for future data-driven customer quality"
+    ],
+    "successCriteria": [
+      "Investigation cycle time reduced from days to minutes",
+      "NTF cases reduced by 30\u201340%",
+      "Significant reduction in unnecessary parts returns",
+      "Dealer adoption >80% in pilot phase",
+      "Continuous improvement in diagnostic accuracy via AI learning"
+    ]
   }
 ];
 
