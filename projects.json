@@ -1,0 +1,38 @@
+[
+  {
+    "id": "crisp-tool",
+    "title": "CRISP Tool – SCP Digitalization",
+    "category": "Digital Transformation",
+    "summary": "A system-driven, integrated digital platform that automates Price Change Calculation (PCR) and Sales, Controlling & Planning (SCP) workflows, bringing transparency, consistency, and governance to contract management.",
+    "impact": "100% traceability of price & volume changes | Eliminated Excel-based processes",
+    "period": "2023 – Present",
+    "organization": "Bosch Ltd",
+    "problem": "CMD and SCP processes for price change calculation (PCR) and volume planning were managed through manual, Excel-based workflows. This led to limited end-to-end visibility across Contracts, Plans (TBP/CF), and Actuals, high manual effort and dependency on individual knowledge, inconsistent and non-repeatable PCR and volume calculations, delays in TBP and CF cycles, and limited auditability and explainability of price and volume deviations.",
+    "solution": "CRISP is a system-driven, integrated digital platform that automates PCR and SCP workflows. It introduces a structured Plan vs Actual explanation framework (Target Cross) to clearly separate and explain price and volume deviations. The platform includes modules for Master Data Management (MDM), Parts Management, Contract Management (Forex, RMI, Energy, Volumes), Purchase Orders, Reconciliations with approval workflows, and Forecasting with CF cycle support.",
+    "modules": [
+      { "name": "MDM", "description": "Add/Update Master Data" },
+      { "name": "Parts", "description": "Customer Code, Import Content, Materials, Energy, Discounts (Volume/YoY/Combined bands), Contracts" },
+      { "name": "Contracts", "description": "Engine Model, Parts, Forex, RMI, Energy — each with Contract Conditions, Threshold/Burden Share, Base Rates & Source; Volumes, Reference Documents" },
+      { "name": "Purchase Orders", "description": "Full CRUD operations for PO management" },
+      { "name": "Reconciliations", "description": "Rates (Forex, Material, Energy), Schedules, Parts Approval Workflow (Pending Approvals → PO → GPM → History)" },
+      { "name": "Forecasting", "description": "Schedules (CF Cycles/Year), CF Cycles with Manual Override, Download Price Forecasting Excel" }
+    ],
+    "technologies": ["Python", "Power BI", "Power Automate", "Azure", "Data Analytics"],
+    "users": "Sales KAMs, SCP-IN team, PS-IN/RGB, rBUs, CTG-IN",
+    "results": [
+      "Digitized and automated end-to-end CMD and SCP workflows, eliminating Excel-based processes",
+      "Seamless traceability: Contracts (Quotation, LOI, PO) → Plan (TBP, CF) → Actuals (YEC, POE billing prices)",
+      "System-driven PCR and volume forecast calculations ensuring consistency and accuracy",
+      "Clear ownership and accountability for pricing, planning, and volume data",
+      "Improved forecast accuracy and faster decision-making through reliable, timely, and explainable insights",
+      "Reduced planning cycle times and manual effort across TBP and CF cycles"
+    ],
+    "successCriteria": [
+      "100% traceability of price and volume changes across Contracts, Plans, Bottom Line, and Actuals",
+      "Consistent, explainable, and auditable PCR calculations with full audit trails",
+      "Measurable improvement in productivity and efficiency",
+      "High adoption and sustained usage by CMD and SCP teams",
+      "Single, trusted version of Target Cross outputs for reviews and decision-making"
+    ]
+  }
+]
