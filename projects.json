@@ -17,7 +17,7 @@
       { "name": "Reconciliations", "description": "Rates (Forex, Material, Energy), Schedules, Parts with Approval Workflow (Pending Approvals \u2192 Pending PO \u2192 Pending GPM \u2192 History)" },
       { "name": "Forecasting", "description": "Schedules (CF Cycles/Year) with View/Update, CF Cycles with Manual Override, Download Price Forecasting Excel" }
     ],
-    "technologies": ["Python", "Power BI", "Power Automate", "Azure", "Data Analytics"],
+    "technologies": ["Python", "AG Grid", "Power Automate", "Angular", "Data Analytics"],
     "users": "Sales KAMs, SCP-IN team, PS-IN/RGB, rBUs, CTG-IN",
     "results": [
       "Digitized and automated end-to-end CMD and SCP workflows, eliminating manual Excel-based processes",
