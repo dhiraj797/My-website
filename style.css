@@ -75,14 +75,14 @@ a:hover {
 }
 
 .nav-logo {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--text);
   letter-spacing: -0.5px;
 }
 
 .nav-logo:hover {
-  color: var(--primary-dark);
+  color: var(--primary);
 }
 
 .nav-links {
@@ -127,8 +127,54 @@ a:hover {
   background: linear-gradient(135deg, var(--bg) 0%, var(--primary-light) 100%);
 }
 
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
 .hero-content {
   max-width: 680px;
+  flex: 1;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--primary);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-photo .photo-placeholder {
+  display: none;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.hero-photo.no-photo {
+  border-style: dashed;
+  background: var(--bg-alt);
+}
+
+.hero-photo.no-photo .photo-placeholder {
+  display: block;
 }
 
 .hero-greeting {
@@ -763,6 +809,17 @@ a:hover {
     display: flex;
   }
 
+  .hero-layout {
+    flex-direction: column-reverse;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .hero-photo {
+    width: 180px;
+    height: 180px;
+  }
+
   .hero {
     padding: 120px 0 60px;
   }
@@ -773,6 +830,7 @@ a:hover {
 
   .hero-stats {
     gap: 24px;
+    justify-content: center;
   }
 
   .stat-number {
@@ -782,6 +840,7 @@ a:hover {
   .hero-links {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   .hero-links .btn {
