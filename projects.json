@@ -89,5 +89,32 @@
       "Accurate, context-aware responses grounded in internal documentation",
       "Multi-domain data connectivity unlocking new engineering insights across products and systems"
     ]
+  },
+  {
+    "id": "ai-drbfm",
+    "title": "AI-Based DRBFM \u2013 Sensor Product Engineering",
+    "category": "AI",
+    "summary": "An AI-assisted DRBFM tool trained on Bosch reference documents that enables novice engineers to draft structured risk analyses and expert engineers to validate efficiently \u2014 dramatically reducing lead times for 30+ annual design changes in automotive sensor products.",
+    "impact": "30+ DRBFMs/year accelerated | L1-grade outputs without 5+ years experience",
+    "period": "2024 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "Bosch supplies automotive sensors (RPM, pressure, temperature, crankshaft) to major OEMs worldwide. These sensors are assembled in inaccessible areas of the vehicle engine bay, and OEMs will not modify their engine layout to accommodate sensor fitment. This forces Bosch to execute frequent design changes, resulting in 30+ DRBFMs annually. Traditionally, conducting a DRBFM requires L1 certification and 5+ years of product-line experience, creating a bottleneck where only a handful of senior engineers can author them. This leads to long lead times, dependency on limited experts, and delays in product development cycles.",
+    "solution": "An AI-assisted DRBFM platform trained on several Bosch DRBFM reference documents. Using Azure OpenAI GPT-5.2 with embeddings and MongoDB Atlas as a vector database, the system enables novice engineers to draft structured, high-quality DRBFM outputs by retrieving relevant failure modes, design concerns, and countermeasures from historical data. A SerpAPI integration provides external perspectives on design changes, enriching the analysis with industry-wide insights. Expert engineers can then peer-review and validate efficiently, reducing the overall cycle time significantly.",
+    "technologies": ["Azure OpenAI", "GPT-5.2", "Embeddings", "MongoDB Atlas Vector DB", "React", "SerpAPI", "Python"],
+    "users": "Sensor Product Engineers, Design Engineers, DRBFM Reviewers",
+    "results": [
+      "Enabled novice engineers to draft L1-grade structured DRBFM outputs without 5+ years of experience",
+      "Reduced DRBFM lead time significantly across 30+ annual design changes",
+      "Accelerated engineering response and faster product development cycles",
+      "Standardized, knowledge-driven risk analysis grounded in Bosch reference documents",
+      "External design change perspectives via SerpAPI integration for enriched analysis"
+    ],
+    "successCriteria": [
+      "Measurable reduction in DRBFM authoring time per design change",
+      "High-quality DRBFM outputs validated by L1-certified expert reviewers",
+      "Adoption by novice engineers across sensor product engineering teams",
+      "Faster time-to-market for sensor design changes driven by OEM requirements",
+      "Consistent, repeatable risk analysis quality across all 30+ annual DRBFMs"
+    ]
   }
 ]
