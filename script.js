@@ -67,6 +67,33 @@ const fallbackProjects = [
       "Dealer adoption >80% in pilot phase",
       "Continuous improvement in diagnostic accuracy via AI learning"
     ]
+  },
+  {
+    "id": "dike",
+    "title": "DIKE \u2013 Document Insights Knowledge Engine",
+    "category": "AI",
+    "summary": "An LLM + RAG-powered knowledge platform that acts as a secure, internal ChatGPT \u2014 grounded entirely in Bosch engineering documentation, enabling data democratization and instant access to critical product knowledge.",
+    "impact": "Data Democratization | Instant knowledge retrieval from internal engineering docs",
+    "period": "2024 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "Engineering teams spend significant time searching for information across servers, SharePoint folders, legacy reports, and multiple repositories. With many experts from conventional product development approaching retirement, critical engineering knowledge risks being lost. New engineers face steep onboarding curves to understand product history, system behavior, field learnings, and past design decisions. Teams frequently encounter information gaps \u2014 questions like: Have we seen this issue before? How did the product behave in the field? Where is the reference documentation?",
+    "solution": "DIKE combines a Large Language Model with Retrieval-Augmented Generation (RAG), built on top of Bosch internal engineering data. Users can ask questions in plain natural language, and the platform retrieves the most relevant internal documents, generates context-aware answers, and provides source references and links for validation. Data from SharePoint and other systems is indexed into an Azure-based vector database, enabling engineers to interact with this knowledge instantly.",
+    "technologies": ["LLM", "RAG", "Azure", "Vector Database", "GPT", "Python"],
+    "users": "Engineering Teams, New Joiners, Product Development Teams",
+    "results": [
+      "Enabled data democratization \u2014 critical engineering knowledge accessible to everyone",
+      "Instant retrieval of relevant documents via plain natural language queries",
+      "Context-aware answers grounded in internal product and engineering documentation",
+      "Source references and document links provided for validation and traceability",
+      "Preserved institutional knowledge from retiring domain experts"
+    ],
+    "successCriteria": [
+      "Significant reduction in time spent searching for engineering information",
+      "Faster onboarding for new engineers with instant access to product history and design decisions",
+      "High adoption across engineering teams",
+      "Accurate, context-aware responses grounded in internal documentation",
+      "Multi-domain data connectivity unlocking new engineering insights across products and systems"
+    ]
   }
 ];
 
