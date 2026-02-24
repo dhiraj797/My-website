@@ -116,5 +116,32 @@
       "Faster time-to-market for sensor design changes driven by OEM requirements",
       "Consistent, repeatable risk analysis quality across all 30+ annual DRBFMs"
     ]
+  },
+  {
+    "id": "eaxle-change-eval",
+    "title": "Change Evaluation AI Assistant \u2013 Bosch eAxle",
+    "category": "AI",
+    "summary": "An AI-powered copilot for eAxle validation engineers that transforms manual, expert-driven change evaluation into a structured, explainable, and repeatable AI-supported workflow \u2014 enabling faster and more consistent responses to OEM change requests and DVP updates.",
+    "impact": "Faster OEM response times | Structured test carry-over decisions with traceability",
+    "period": "2024 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "Bosch eAxle development and validation teams face frequent OEM change requests and DVP (Design Verification Plan) updates that require rapid, accurate evaluation. Today's process is manual and expert-driven \u2014 identifying which tests to carry over, re-execute, or newly add depends heavily on individual knowledge and experience. This leads to inconsistent responses, slow turnaround times, lack of structured justification and document-level traceability, and reduced responsiveness to OEM queries during critical development and validation phases.",
+    "solution": "The Change Evaluation AI Assistant acts as a copilot for validation engineers, providing AI-assisted decision support for OEM change requests and DVP evaluations. Built on Azure OpenAI GPT-5.2 with embeddings and MongoDB Atlas as a vector database, it retrieves relevant test histories, validation records, and engineering documentation to recommend tests for carry-over, re-execution, or new addition. A SerpAPI integration provides external perspectives on design changes. The React-based UI delivers clear justifications with document-level traceability, enabling engineers to respond quickly and consistently to market and OEM queries.",
+    "technologies": ["Azure OpenAI", "GPT-5.2", "Embeddings", "MongoDB Atlas Vector DB", "React", "SerpAPI", "Python"],
+    "users": "eAxle Validation Engineers, Development Engineers, DVP Teams",
+    "results": [
+      "Transformed manual change evaluation into a structured, explainable AI-supported workflow",
+      "Faster identification of tests to carry over, re-execute, or newly add for each change request",
+      "Clear justification with document-level traceability for every recommendation",
+      "Improved responsiveness to OEM queries during development and validation phases",
+      "Consistent, repeatable evaluations independent of individual expert availability"
+    ],
+    "successCriteria": [
+      "Measurable reduction in OEM change request response time",
+      "High accuracy of test carry-over and re-execution recommendations validated by experts",
+      "Adoption by eAxle validation and development engineering teams",
+      "Full document-level traceability for all AI-generated recommendations",
+      "Standardized change evaluation process across eAxle product variants"
+    ]
   }
 ]
