@@ -248,6 +248,41 @@ const fallbackProjects = [
       "Accurate top-3 HSN code recommendations validated against expert classifications",
       "Quarterly metrics demonstrating sustained reduction in penalties, bad cost, and customs notices"
     ]
+  },
+  {
+    "id": "strategic-workforce-planning",
+    "title": "Strategic Workforce Planning \u2013 PS/HRM-IN",
+    "category": "Digital Transformation",
+    "summary": "Identified and implemented a SaaS-based strategic workforce planning solution for Bosch India HR (PS/HRM-IN) \u2014 enabling data-driven demand planning, gap analysis, people strategy development, and alignment with long-term business goals through a streamlined, end-to-end digital process.",
+    "impact": "Data-driven workforce decisions | Streamlined planning process | Long-term business alignment",
+    "period": "2024 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "Bosch India\u2019s HR function (PS/HRM-IN) lacked a structured, data-driven approach to strategic workforce planning. Planning was fragmented across spreadsheets and manual processes, making it difficult to accurately forecast workforce demand, identify skill gaps, develop targeted people strategies, and align workforce plans with long-term business objectives. Without a unified platform, HR teams struggled with inconsistent data, limited scenario modeling capability, and slow turnaround on workforce insights needed for strategic decision-making.",
+    "solution": "Identified and selected a suitable SaaS vendor to implement a data-driven strategic workforce planning solution for PS/HRM-IN. Facilitated the entire project lifecycle \u2014 from vendor selection and process design to implementation and stakeholder training \u2014 resulting in a streamlined, efficient workforce planning process. The solution provides structured modules for demand planning, gap analysis, people strategy development, and alignment with long-term business goals, enabling HR leadership to make informed, forward-looking workforce decisions.",
+    "modules": [
+      { "name": "Demand Planning", "description": "Forecasts future workforce requirements based on business growth projections, attrition trends, and strategic priorities" },
+      { "name": "Gap Analysis", "description": "Identifies gaps between current workforce capabilities and future requirements across roles, skills, and competencies" },
+      { "name": "People Strategy", "description": "Develops targeted strategies for talent acquisition, development, retention, and succession planning based on gap analysis outcomes" },
+      { "name": "Business Alignment", "description": "Ensures workforce plans are aligned with long-term business goals, enabling scenario modeling and strategic what-if analysis" }
+    ],
+    "technologies": ["SaaS Platform", "Data Analytics", "Workforce Planning", "Cloud"],
+    "users": "PS/HRM-IN (Bosch India HR), HR Leadership, Business Unit Heads",
+    "results": [
+      "Implemented a unified, data-driven strategic workforce planning platform for Bosch India HR",
+      "Streamlined the end-to-end workforce planning process from fragmented spreadsheets to a single SaaS solution",
+      "Enabled structured demand planning with forecasting based on business projections and attrition trends",
+      "Systematic gap analysis identifying skill and capability gaps across the organization",
+      "Data-driven people strategy development for talent acquisition, development, and succession planning",
+      "Alignment of workforce plans with long-term business objectives through scenario modeling"
+    ],
+    "successCriteria": [
+      "Successful SaaS vendor selection, implementation, and go-live for PS/HRM-IN",
+      "Adoption by HR leadership and business unit heads as the primary workforce planning tool",
+      "Measurable improvement in workforce forecast accuracy and planning cycle time",
+      "Stakeholder training completed with high satisfaction and self-sufficiency",
+      "Workforce plans demonstrably aligned with long-term business strategy and goals",
+      "Sustained usage across planning cycles with continuous improvement in data quality"
+    ]
   }
 ];
 
