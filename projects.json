@@ -180,5 +180,32 @@
       "Consistent requirement quality and categorization across teams and product variants",
       "Successful on-premises deployment with SC2 compliance and cybersecurity clearance"
     ]
+  },
+  {
+    "id": "ask-maintenance",
+    "title": "Ask Maintenance \u2013 LLM-Powered Troubleshooting Bot",
+    "category": "AI",
+    "summary": "An LLM-powered troubleshooting assistant for maintenance technicians that leverages historical SAP breakdown data and technician-documented repair measures to provide guided, context-aware troubleshooting \u2014 reducing MTTR by 35% at the Bosch Bidadi pilot plant.",
+    "impact": "MTTR reduced by 35% | Improved technician productivity & machine utilization",
+    "period": "2024 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "Maintenance technicians on the shop floor face machine breakdowns that require rapid diagnosis and resolution. Critical troubleshooting knowledge is scattered across SAP breakdown records where technicians document their repair measures in free-text comments. This institutional knowledge is difficult to search, not structured for quick retrieval, and heavily dependent on experienced technicians being available. New or less experienced technicians struggle to find relevant past solutions, leading to longer Mean Time To Repair (MTTR), repeated trial-and-error approaches, reduced machine utilization, and production losses.",
+    "solution": "Ask Maintenance is an LLM-powered troubleshooting bot that ingests historical SAP breakdown data \u2014 including technician-documented troubleshooting measures and repair comments \u2014 into a vector database. Built on Azure OpenAI GPT-5.2 with embeddings and MongoDB Atlas, it enables technicians to describe a machine issue in plain language and receive guided, step-by-step troubleshooting recommendations grounded in actual past repairs. A SerpAPI integration provides external technical references when needed. Piloted at the Bosch Bidadi manufacturing plant, the bot acts as a 24/7 digital maintenance expert that any technician can consult instantly.",
+    "technologies": ["Azure OpenAI", "GPT-5.2", "Embeddings", "MongoDB Atlas Vector DB", "React", "SerpAPI", "Python", "SAP Integration"],
+    "users": "Maintenance Technicians, Shift Engineers, Plant Maintenance Teams (Bosch Bidadi Plant)",
+    "results": [
+      "Reduced Mean Time To Repair (MTTR) by 35% at the Bosch Bidadi pilot plant",
+      "Improved technician productivity through guided, context-aware troubleshooting from historical SAP data",
+      "Improved machine utilization by enabling faster breakdown resolution",
+      "Preserved and democratized institutional maintenance knowledge from experienced technicians",
+      "Enabled less experienced technicians to resolve issues independently using AI-guided recommendations"
+    ],
+    "successCriteria": [
+      "Sustained 35% or greater reduction in MTTR across targeted machine groups",
+      "High adoption by maintenance technicians across shifts at the Bidadi plant",
+      "Measurable improvement in machine utilization and reduction in production downtime",
+      "Accurate troubleshooting recommendations validated against actual repair outcomes",
+      "Scalability for rollout to additional Bosch manufacturing plants"
+    ]
   }
 ]
