@@ -143,5 +143,42 @@
       "Full document-level traceability for all AI-generated recommendations",
       "Standardized change evaluation process across eAxle product variants"
     ]
+  },
+  {
+    "id": "2wp-req-engineering",
+    "title": "AI Requirements Engineering Assistant \u2013 Bosch 2WP",
+    "category": "AI",
+    "summary": "A fully deployed AI-powered platform that automates the requirements engineering lifecycle for Bosch Two-Wheeler & Powersports (2WP) \u2014 converting unstructured customer inputs into structured, categorized L1 and L2 engineering requirements with gap detection, conflict identification, and full traceability.",
+    "impact": "Requirement drafting: Hours \u2192 Minutes | 50 engineers across 5 product lines",
+    "period": "2024 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "System engineers in the 2WP division manually convert unstructured customer inputs \u2014 meeting notes, emails, diagrams, and technical documents \u2014 into structured engineering requirements across L1 (high-level) and L2 (detailed) stages. This process is time-consuming, error-prone, and heavily dependent on individual expert knowledge. Engineers struggle with identifying gaps, missing information, and conflicts across requirement categories such as CAN Messages, Diagnostics, Monitoring, Fault Implementation, Hardware Tolerances, Software Implementations, and Calibration. With multiple product lines (ABS/Safety, Engine Management, Electric Powertrain, Connectivity, Vehicle Computer), maintaining consistency and traceability across teams is a significant challenge.",
+    "solution": "A fully deployed AI-powered requirements engineering assistant that automates the entire L1-to-L2 lifecycle. Engineers upload documents (PDF, Excel, Word) and images (diagrams, whiteboard photos), and the AI generates structured, categorized L1 requirements automatically. It identifies missing information, assumptions, and gaps. After engineer review, the system generates detailed L2 requirements with test approaches, conflict detection against existing system specifications, and safety/cyber linkage. The platform includes DOORS integration for existing requirements, session history for saving and resuming work, Word document export, web search for datasheets and technical references, and an admin panel with usage analytics. Deployed on-premises within Bosch infrastructure with Azure AD SSO and SC2 data classification.",
+    "modules": [
+      { "name": "L1 Requirement Generation", "description": "Parses unstructured inputs (meeting notes, emails, diagrams) and generates clear, atomic, categorized L1 requirements across CAN, Diagnostics, Monitoring, Fault, Hardware, Software, and Calibration domains" },
+      { "name": "L2 Requirement Decomposition", "description": "Decomposes L1 requirements into detailed L2 specifications with technical details, algorithms, interfaces, and constraints. Includes conflict detection and change impact analysis" },
+      { "name": "Gap & Conflict Detection", "description": "Identifies missing requirements, assumptions, redundancies, and conflicts against existing system specifications and architecture" },
+      { "name": "Traceability & Safety Linkage", "description": "Bidirectional traceability between L1/L2, design elements, diagnostics (DTCs), CAN signals, calibration parameters, tests, and safety/cyber work products" },
+      { "name": "Document Management", "description": "Multi-format upload (PDF, Excel, Word, images), Word export, DOORS integration (read-only), and persistent session history" },
+      { "name": "Admin & Analytics", "description": "User management via Azure AD SSO, usage analytics dashboard, and system monitoring for up to 50 concurrent engineers" }
+    ],
+    "technologies": ["Azure OpenAI", "GPT-5.1", "MongoDB Atlas", "React", "Python", "DOORS Integration", "Azure AD SSO", "SerpAPI"],
+    "users": "2WP System Engineers (up to 50 concurrent), Product Owners, across ABS/Safety, Engine Management, Electric Powertrain, Connectivity, Vehicle Computer product lines",
+    "results": [
+      "Reduced initial requirement drafting time from hours to minutes across all 2WP product lines",
+      "Automated L1-to-L2 requirement decomposition with test approach suggestions and full traceability",
+      "AI-driven gap detection identifies missing information, assumptions, and conflicts that manual reviews may overlook",
+      "Standardized requirement format and categorization across 5 product lines ensuring cross-team consistency",
+      "Domain knowledge embedded in the system, reducing dependency on individual experts and improving knowledge retention",
+      "Production-deployed on-premises with SC2 data classification, Azure AD SSO, and support for 50 concurrent users"
+    ],
+    "successCriteria": [
+      "Adoption by 2WP system engineers across all 5 product lines",
+      "Measurable reduction in requirement creation cycle time from hours to minutes",
+      "High accuracy in AI-generated requirements validated by engineering reviewers",
+      "Complete bidirectional traceability between L1, L2, design elements, tests, and safety work products",
+      "Consistent requirement quality and categorization across teams and product variants",
+      "Successful on-premises deployment with SC2 compliance and cybersecurity clearance"
+    ]
   }
 ]
