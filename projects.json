@@ -207,5 +207,41 @@
       "Accurate troubleshooting recommendations validated against actual repair outcomes",
       "Scalability for rollout to additional Bosch manufacturing plants"
     ]
+  },
+  {
+    "id": "fta-cth-classification",
+    "title": "FTA & CTH Classification using GenAI",
+    "category": "AI",
+    "summary": "A GenAI-powered customs classification tool that automates CTH (Customs Tariff Heading) identification and FTA (Free Trade Agreement) applicability analysis \u2014 returning the nearest 3 matching HSN codes with duty rates, eliminating manual errors across 98 CBIC chapters, and enabling proactive FTA savings for Bosch India imports.",
+    "impact": "50% reduction in penalties & bad cost | FTE reduction from 6 to 3 annually | Proactive FTA savings",
+    "period": "2024 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "Determining basic customs duty for imported parts/components in India involves a manual, error-prone process. The foreign trade and taxation teams at Bosch manually navigate the government CBIC portal, sifting through 98 chapter IDs to ascertain the correct CTH code and customs duty rates based on product type, make, and end use. Selecting an incorrect HSN code has two costly outcomes: if the chosen rate is lower than actual, Bosch receives customs notices for underpayment; if higher, Bosch incurs direct financial loss from overpayment. Additionally, Free Trade Agreements (FTAs) between India and countries of origin offer concessional duty rates, but neglecting to identify and apply applicable FTAs results in further direct losses \u2014 Bosch pays more customs duty than necessary. The entire process depends heavily on SME knowledge, lacks standardization, and carries significant compliance and financial risk.",
+    "solution": "A GenAI-powered customs classification tool that comprehensively scans all 98 CBIC chapters and FTA notifications released by the Indian government. For indirect materials, users input product description, usage, material type, and dismantled status, and the tool returns the nearest 3 matching HSN codes along with corresponding BCD (Basic Customs Duty) and IGST rates. For FTA identification, the tool takes HSN and country of origin to surface applicable Free Trade Agreements with concessional duty rates and notification numbers. Built on Azure OpenAI GPT-5.2 with embeddings and MongoDB Atlas as a vector database, the system uses natural language search over the Custom Tariff dataset. A bulk update module enables the foreign trade team to batch-process FTA applicability, savings, and notification numbers across multiple parts. Change history tracking ensures full auditability of CTH, BCD, FTA, and IGST modifications. The project runs in 2 phases: Phase 1 (FTA) and Phase 2 (CTH).",
+    "modules": [
+      { "name": "CTH Classification", "description": "Natural language search across all 98 CBIC chapters \u2014 returns nearest 3 matching HSN codes with BCD and IGST rates based on product description, usage, material, and dismantled status" },
+      { "name": "FTA Identification", "description": "Identifies applicable Free Trade Agreements based on HSN and country of origin, surfacing concessional duty rates and notification numbers from government FTA notifications" },
+      { "name": "Bulk Update", "description": "Batch processing of FTA applicability, savings, notification numbers for multiple parts by country of origin and part description" },
+      { "name": "Change History Tracking", "description": "Full audit trail tracking changes to CTH, BCD, FTA, and IGST classifications over time" }
+    ],
+    "technologies": ["Azure OpenAI", "GPT-5.2", "Embeddings", "MongoDB Atlas Vector DB", "React", "SerpAPI", "Python", "CBIC Data Integration"],
+    "users": "Foreign Trade Team (C/TXR-IN-F), Taxation Team (GS/OSD4-IN), Bosch India",
+    "results": [
+      "Automated CTH identification across all 98 CBIC chapters, returning nearest 3 matching HSN codes with duty rates",
+      "Proactive FTA identification enabling concessional duty rates and direct cost savings on imports",
+      "Reduced penalties and bad cost by 50% through accurate customs classification (Phase 1 target)",
+      "FTE reduction from 6 to 3 annually for FTA and CTH classification turnaround",
+      "Eliminated manual navigation of the CBIC portal and dependency on individual SME knowledge",
+      "Bulk update capability for batch processing FTA applicability across multiple parts and countries of origin",
+      "Full change history tracking ensuring compliance auditability for CTH, BCD, FTA, and IGST modifications"
+    ],
+    "successCriteria": [
+      "Reduction in error observations from C/TAX or notices from Customs authorities",
+      "50% reduction in penalties and bad cost after Phase 1 implementation",
+      "Year-on-year increase in FTA savings realization percentage for Bosch India direct materials",
+      "High adoption by foreign trade and taxation teams as the primary classification tool",
+      "Accurate top-3 HSN code recommendations validated against expert classifications",
+      "Quarterly metrics demonstrating sustained reduction in penalties, bad cost, and customs notices"
+    ]
   }
 ]
