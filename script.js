@@ -283,6 +283,41 @@ const fallbackProjects = [
       "Workforce plans demonstrably aligned with long-term business strategy and goals",
       "Sustained usage across planning cycles with continuous improvement in data quality"
     ]
+  },
+  {
+    "id": "prop-el",
+    "title": "PROP-EL \u2013 Prohibition of Parts \u2013 End of Life",
+    "category": "Data Analytics",
+    "summary": "A big data-driven dashboard and analytics solution that identifies non-moving and prohibition-eligible parts across 50,000+ part numbers and 820 suppliers \u2014 enabling transparent prohibition alignment between M/PU, BU, rBU, and MA, and supporting a 33\u201337% purchase volume reduction through elimination of unutilized part numbers.",
+    "impact": "33\u201337% PV reduction | ~6,900 unutilized PNs identified | 194 MEUR purchase volume transparency",
+    "period": "2024 (Completed)",
+    "organization": "Bosch Ltd",
+    "problem": "Bosch\u2019s purchasing organization manages ~50,000 part numbers across 820 suppliers with a purchase volume of 194 MEUR, but only 30% (~15,330) of these part numbers are active. Supply chain planning and price planning year-on-year are complicated by this large volume of dormant parts. For CONV (conventional powertrain) alone, the dataset includes 180,000 line items. Proposing prohibition is challenging because pump-level prohibition differs from component-level prohibition, and alignment with BU prohibition strategy and delivery obligations adds complexity. Non-moving and exotic parts create firefighting situations, and supplier insolvencies or exits \u2014 common in CONV \u2014 amplify cost risks for parts that may no longer be needed.",
+    "solution": "A big data approach for data collation and analysis across 6 years of purchasing data (2018\u20132023) from PS consolidation onwards, covering IP, NHA, VE, UP, and UIN categories across JP, IN, DE, BR, and TH locations. The PROP-EL dashboard provides interactive analytics with multiple selection criteria, part number search functionality, Plan vs Actual comparisons for quantity and purchase volume, and annual trend distributions. The pilot at CONV @ RBJP identified ~300 unique PNs with planned quantities but zero deliveries, and ~6,600 unique PNs with zero planned quantity and zero deliveries \u2014 all representing unrealized purchase volume affecting PUR performance. Findings were shared with JP purchasing management, stakeholders, PS-AB, and MA to jointly define a roadmap for inclusion into the prohibition campaign.",
+    "modules": [
+      { "name": "Data Collation", "description": "Big data approach aggregating 6 years of purchasing data (2018\u20132023) across IP, NHA, VE, UP, UIN categories and 5 country locations (JP, IN, DE, BR, TH)" },
+      { "name": "PROP-EL Dashboard", "description": "Interactive dashboard with PN search, multiple selection criteria, Plan vs Actual charts for quantity and PV, and annual trend distributions for PN count and purchase volume" },
+      { "name": "Non-Moving Parts Analysis", "description": "Identification of PNs with planned quantities but no deliveries (~300 PNs) and PNs with zero planning and zero deliveries (~6,600 PNs)" },
+      { "name": "Prohibition Alignment", "description": "Transparency layer for prohibition alignment between M/PU, BU, rBU, and MA with roadmap for inclusion into prohibition campaigns" }
+    ],
+    "technologies": ["Big Data", "Data Analytics", "Dashboard", "Power BI", "Python"],
+    "users": "M/PPS-DC-CO (Project Owner: Krishna C A, Mentor: Rajesh V), RBIN/BDO-DT (Santhosh Kumar, Dhiraj P), JP Purchasing Management, PS-AB, MA, BU and rBU stakeholders",
+    "results": [
+      "Identified ~6,900 unutilized part numbers (~300 with planned qty but no deliveries + ~6,600 with zero planning and zero deliveries)",
+      "Projected 33\u201337% purchase volume reduction through prohibition of unutilized part numbers (CONV: 113\u219271 MEUR, IP-P00400: 191\u2192128 MEUR by 2031)",
+      "Created full transparency across 194 MEUR purchase volume, 820 suppliers, and 50,000+ part numbers",
+      "Interactive dashboard with 6 years of purchasing data enabling data-driven prohibition decisions",
+      "Enabled prohibition alignment between M/PU, BU, rBU, and MA with structured stakeholder engagement",
+      "Minimized firefighting risks from exotic/non-moving parts and supplier insolvency exposure in CONV"
+    ],
+    "successCriteria": [
+      "Dashboard deployed with 6 years of purchasing data across all 5 country locations",
+      "Stakeholder alignment completed with JP purchasing management, PS-AB, and MA",
+      "Prohibition roadmap defined and integrated into prohibition campaign",
+      "Measurable reduction in non-moving parts and associated purchase volume",
+      "Reduced cost impact from supplier insolvencies through proactive prohibition of unutilized parts",
+      "Pilot findings at CONV @ RBJP validated and extended to broader scope"
+    ]
   }
 ];
 
