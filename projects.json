@@ -284,7 +284,7 @@
     "title": "ROIN One HR Dashboard \u2013 Unified Workforce Analytics",
     "category": "Data Analytics",
     "summary": "A unified, full-stack HR analytics platform that consolidates siloed workforce data across 40,000 Bosch India employees and 17 manufacturing plants into a single Databricks-powered dashboard \u2014 giving HR leadership real-time, end-to-end visibility across Demography, Attrition, Talent Acquisition, Talent Profile, and Rewards.",
-    "impact": "50% reduction in HR reporting time | Analytics at management\u2019s fingertips | 40,000 employees across 17 plants",
+    "impact": "50% reduction in HR reporting time | Analytics at management\u2019s fingertips | 40,000 employees across 17 plants , BGSW and corporate",
     "period": "2025 \u2013 Present",
     "organization": "Bosch Ltd",
     "problem": "HR data for 40,000 Bosch India employees was fragmented across multiple independent systems \u2014 Talent Acquisition, Performance Management, Rewards & Recognition, Demography (central team), and Login/WFO/WFH data. Each function maintained its own data silo with no unified view available to HR leadership or plant management. This made it impossible to get a consolidated picture of the workforce, slowed down reporting, and limited the ability to make timely, data-driven HR decisions across Bosch India\u2019s 17 manufacturing plants.",
