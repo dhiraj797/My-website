@@ -285,6 +285,42 @@ const fallbackProjects = [
     ]
   },
   {
+    "id": "roin-one-hr-dashboard",
+    "title": "ROIN One HR Dashboard \u2013 Unified Workforce Analytics",
+    "category": "Data Analytics",
+    "summary": "A unified, full-stack HR analytics platform that consolidates siloed workforce data across 40,000 Bosch India employees and 17 manufacturing plants into a single Databricks-powered dashboard \u2014 giving HR leadership real-time, end-to-end visibility across Demography, Attrition, Talent Acquisition, Talent Profile, and Rewards.",
+    "impact": "50% reduction in HR reporting time | Analytics at management\u2019s fingertips | 40,000 employees across 17 plants, BGSW and corporate",
+    "period": "2025 \u2013 Present",
+    "organization": "Bosch Ltd",
+    "problem": "HR data for 40,000 Bosch India employees was fragmented across multiple independent systems \u2014 Talent Acquisition, Performance Management, Rewards & Recognition, Demography (central team), and Login/WFO/WFH data. Each function maintained its own data silo with no unified view available to HR leadership or plant management. This made it impossible to get a consolidated picture of the workforce, slowed down reporting, and limited the ability to make timely, data-driven HR decisions across Bosch India\u2019s 17 manufacturing plants.",
+    "solution": "Designed and led the development of the ROIN One HR Dashboard \u2014 a centralized analytics platform that mirrors and integrates all siloed HR data into a Databricks instance. Structured data models were built and published to a Databricks SQL Warehouse, consumed by a Python backend, and surfaced through a React and Vue-based frontend with layered access control. The platform provides HR leadership and management with a single, real-time view of the entire Bosch India workforce across all associate dimensions \u2014 from demography and attrition to talent acquisition and rewards.",
+    "modules": [
+      { "name": "Demography", "description": "End-to-end associate demographic insights \u2014 headcount distribution, age, tenure, gender diversity, and location-wise breakdowns across 17 manufacturing plants" },
+      { "name": "Attrition", "description": "Attrition trends, patterns, and early indicators across business units, plants, and tenure bands \u2014 enabling proactive retention strategies" },
+      { "name": "Talent Profile", "description": "Consolidated talent profiles including skills, qualifications, performance indicators, and career history for associates across Bosch India" },
+      { "name": "Rewards & Recognition", "description": "Visibility into rewards distribution, recognition patterns, and alignment with performance outcomes across the organization" },
+      { "name": "Talent Acquisition", "description": "Real-time recruitment pipeline status \u2014 open positions, hiring progress, offer conversions, and time-to-hire metrics across functions and plants" }
+    ],
+    "technologies": ["Databricks", "SQL Warehouse", "Python", "React", "Vue", "Azure", "Layered Access Control"],
+    "users": "HR Leadership, Plant Managers, Business Unit Heads \u2014 across Bosch India\u2019s 17 manufacturing plants",
+    "results": [
+      "Consolidated HR data for 40,000 Bosch India employees from 5+ siloed systems into a single Databricks-powered platform",
+      "50% reduction in HR reporting time through automated data pipelines and real-time dashboards",
+      "Enabled data-driven decision-making with analytics readily available to HR and plant management",
+      "End-to-end workforce visibility across Demography, Attrition, Talent Profile, Rewards, and Talent Acquisition",
+      "Layered access control ensuring the right level of data visibility for each stakeholder group",
+      "Transformed HR insights into active leadership talking points, driving strategic workforce conversations across Bosch India"
+    ],
+    "successCriteria": [
+      "Successful go-live in March 2026 with adoption by HR leadership and plant managers across all 17 plants",
+      "Sustained 50% or greater reduction in HR reporting effort post go-live",
+      "All 5 data domains (Demography, Attrition, Talent Profile, Rewards, Talent Acquisition) live and up-to-date",
+      "High adoption and regular usage by management as the primary HR analytics interface",
+      "Data accuracy validated against source systems with layered access control enforced across user roles",
+      "Measurable improvement in speed and quality of HR decision-making at leadership level"
+    ]
+  },
+  {
     "id": "prop-el",
     "title": "PROP-EL \u2013 Prohibition of Parts \u2013 End of Life",
     "category": "Data Analytics",
@@ -512,6 +548,23 @@ window.addEventListener('scroll', () => {
     navbar.style.boxShadow = 'none';
   }
   lastScroll = scrollY;
+});
+
+// ==========================================
+// Scroll to Top
+// ==========================================
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // ==========================================
