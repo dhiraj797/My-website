@@ -8,7 +8,7 @@
     "period": "2023 \u2013 Present",
     "organization": "Bosch Ltd",
     "problem": "CMD and SCP processes for price change calculation (PCR) and volume planning were managed through manual, Excel-based workflows. This led to limited end-to-end visibility across Contracts, Plans (TBP/CF), and Actuals, high manual effort and dependency on individual knowledge, inconsistent and non-repeatable PCR and volume calculations, delays in TBP and CF cycles, and limited auditability and explainability of price and volume deviations.",
-    "solution": "CRISP is a system-driven, integrated digital platform that automates PCR and SCP workflows. It introduces a structured Plan vs Actual explanation framework (Target Cross) to clearly separate and explain price and volume deviations. The platform enables seamless traceability across the value chain: Contracts (Quotation, LOI, PO) \u2192 Plan (TBP, CF) \u2192 Actuals (YEC, POE billing prices).",
+    "solution": "CRISP is a system-driven, integrated digital platform that automates PCR and SCP workflows. It introduces a structured Plan vs Actual explanation framework (Target Cross) to clearly separate and explain price and volume deviations. The platform enables seamless traceability across the value chain: Contracts (Quotation, LOI, PO) \u2192 Plan (TBP, CF) \u2192 Actuals (YEC, POE billing prices).Currently price change and forecasting happens through this platform for 34 + OE customers",
     "modules": [
       { "name": "MDM", "description": "Add/Update Master Data \u2013 centralized management of all master data entities" },
       { "name": "Parts", "description": "Customer Code, Import Content, Materials, Energy, Discounts (Volume / Year-on-Year / Combined bands), Contracts (Read-Only)" },
