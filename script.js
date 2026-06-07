@@ -354,6 +354,35 @@ const fallbackProjects = [
       "Reduced cost impact from supplier insolvencies through proactive prohibition of unutilized parts",
       "Pilot findings at CONV @ RBJP validated and extended to broader scope"
     ]
+  },
+  {
+    "id": "variant-optimizer",
+    "title": "AI-Based Variant Optimizer – Camshaft Rationalization",
+    "category": "AI",
+    "summary": "An AI agent that compares 1,500+ camshaft variant drawings against master specifications to identify rationalizable part numbers — achieving 20–22% part number reduction across 200+ components, streamlining the supply chain and reducing costs for diesel inline pump production.",
+    "impact": "20–22% part numbers rationalized | 200+ components analyzed | 1,500+ variants processed",
+    "period": "2024 (Completed)",
+    "organization": "Bosch Ltd",
+    "problem": "Bosch had accumulated over 1,500 variants of camshafts for the diesel inline pump, primarily due to design indiscipline — the design team released new drawings with unique part numbers for every customer demand, even when specifications were identical or nearly identical to existing parts. The organization estimated that at least 30% of camshafts shared the same specifications but carried different part numbers. This variant explosion made supply chain management inefficient, increased inventory complexity, and drove up costs through unnecessary tooling, procurement, and logistics for duplicate parts.",
+    "solution": "Built an AI agent that systematically compares all offer drawings against the master drawing to identify rationalizable part numbers. The Streamlit-based front end, hosted on Azure with AI Search, allows designers to upload a master drawing and key in basic dimensions. The agent then crawls across all part numbers in the system, extracts and compares dimensions from engineering drawings, and identifies part numbers with matching or equivalent specifications that can be consolidated. Results are loaded into Excel for review and rationalization decisions. Executed as a one-time, mission-mode activity across 200+ components.",
+    "technologies": ["Azure AI Search", "Streamlit", "Azure", "Python", "AI Agent", "Document Intelligence"],
+    "users": "Design Engineers, Supply Chain Teams, Production Planning",
+    "results": [
+      "Analyzed 1,500+ camshaft variants across 200+ components in mission-mode execution",
+      "Achieved 20–22% part number rationalization across all analyzed components",
+      "Automated extraction and comparison of dimensions from engineering drawings against master specifications",
+      "Enabled data-driven rationalization decisions with structured Excel output for review",
+      "Streamlined supply chain by eliminating duplicate part numbers with identical specifications",
+      "Reduced inventory complexity, tooling costs, and procurement overhead from variant explosion"
+    ],
+    "successCriteria": [
+      "200+ components fully analyzed with rationalization recommendations generated",
+      "20–22% part number reduction validated by design and supply chain teams",
+      "Accurate dimension extraction and comparison against master drawing specifications",
+      "Rationalization decisions acted upon with measurable supply chain cost reduction",
+      "Design team adoption of rationalized part numbers for future orders",
+      "One-time mission-mode execution completed within target timeline"
+    ]
   }
 ];
 
