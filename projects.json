@@ -355,7 +355,7 @@
     "title": "AI-Based Variant Optimizer – Camshaft Rationalization",
     "category": "AI",
     "summary": "An AI agent that compares 1,500+ camshaft variant drawings against master specifications to identify rationalizable part numbers — achieving 20–22% part number reduction across 200+ components, streamlining the supply chain and reducing costs for diesel inline pump production.",
-    "impact": "20–22% part numbers rationalized | 200+ components analyzed | 1,500+ variants processed",
+    "impact": "12M INR annual recurring savings | 20–22% part numbers rationalized | 200+ components analyzed",
     "period": "2024 (Completed)",
     "organization": "Bosch Ltd",
     "problem": "Bosch had accumulated over 1,500 variants of camshafts for the diesel inline pump, primarily due to design indiscipline — the design team released new drawings with unique part numbers for every customer demand, even when specifications were identical or nearly identical to existing parts. The organization estimated that at least 30% of camshafts shared the same specifications but carried different part numbers. This variant explosion made supply chain management inefficient, increased inventory complexity, and drove up costs through unnecessary tooling, procurement, and logistics for duplicate parts.",
@@ -368,7 +368,8 @@
       "Automated extraction and comparison of dimensions from engineering drawings against master specifications",
       "Enabled data-driven rationalization decisions with structured Excel output for review",
       "Streamlined supply chain by eliminating duplicate part numbers with identical specifications",
-      "Reduced inventory complexity, tooling costs, and procurement overhead from variant explosion"
+      "Reduced inventory complexity, tooling costs, and procurement overhead from variant explosion",
+      "Delivered 12 million INR in annual recurring savings through supply chain optimization and part number consolidation"
     ],
     "successCriteria": [
       "200+ components fully analyzed with rationalization recommendations generated",
