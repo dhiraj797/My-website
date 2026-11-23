@@ -379,5 +379,41 @@
       "Design team adoption of rationalized part numbers for future orders",
       "One-time mission-mode execution completed within target timeline"
     ]
+  },
+  {
+    "id": "bom-rfq-assistant",
+    "title": "BoM Generator & RFQ Assistant",
+    "category": "AI",
+    "summary": "An AI-powered web platform for throttle-valve actuator quotations (DV-E / RKL-E) that automates Bill of Materials generation with pricing, converts multi-format customer RFQ documents into structured Excel with 99.8%+ completeness, and provides a Bosch knowledge base for semantic evaluation of requirements — deployed on Azure Static Web Apps with GitHub CI/CD.",
+    "impact": "RFQ processing: Hours → Minutes | 99.8%+ extraction completeness | 34 customer formats supported",
+    "period": "2024 – Present",
+    "organization": "Bosch Ltd",
+    "problem": "The throttle-valve actuator quotation process (DV-E / RKL-E) involved significant manual effort across multiple stages. Generating Bills of Materials required engineers to manually select components, apply pricing rules, and handle currency conversions. Customer RFQ documents arrived in widely varying formats — from VW Lastenheft to Ford specifications — across 34 different customers, each with unique layouts, tables, charts, and sometimes German-language content. Converting these into structured, comparable Excel formats was time-consuming, error-prone, and required per-customer setup. Additionally, evaluating RFQ requirements against Bosch's own product specifications and standards required engineers to manually search through internal PDFs, with no systematic way to assess compliance or identify gaps across requirement rows.",
+    "solution": "A comprehensive AI-powered web platform deployed on Azure Static Web Apps with GitHub CI/CD (v0.21.1) that addresses the full quotation lifecycle through three integrated modules. The BoM Generator enables family and diameter selection with automatic bill of materials construction from fixed rules, configurable component inclusion/exclusion, INR pricing with real-time currency conversion, Bosch-branded Excel export, and full generation history. The RFQ-to-Excel module reads customer requirement PDFs in any format across 34 customers without per-customer setup — extracting sections, tables, and charts as images, translating German to English, adding page number references, and achieving 99.8%+ field completeness. The Bosch Knowledge Base & Evaluation module allows users to upload Bosch PDFs, perform semantic and keyword search, and generate verdicts per RFQ row with source citations for compliance assessment.",
+    "modules": [
+      { "name": "BoM Generator", "description": "Family/diameter selection with automatic BoM construction from fixed rules, configurable components, INR pricing with currency conversion, Bosch-branded Excel export, and generation history tracking" },
+      { "name": "RFQ → Excel", "description": "Reads customer requirement PDFs in any format (34 customers, no per-customer setup), extracts sections, tables as images, charts as images, German→English translation, page number references — 99.8%+ field completeness" },
+      { "name": "Bosch Knowledge Base & Evaluation", "description": "Upload Bosch PDFs for semantic + keyword search, generates verdict per RFQ row with source citations for compliance assessment against Bosch product specifications" }
+    ],
+    "technologies": ["Azure Static Web Apps", "GitHub CI/CD", "Azure OpenAI", "OCR", "Document Intelligence", "Python", "React"],
+    "users": "Sales Engineers, Quotation Teams, Product Management (DV-E / RKL-E Throttle-Valve Actuators)",
+    "results": [
+      "Automated end-to-end BoM generation with pricing, currency conversion, and Bosch-branded Excel export",
+      "RFQ document processing across 34 customer formats without any per-customer setup or configuration",
+      "99.8%+ field extraction completeness from customer requirement PDFs including tables, charts, and mixed-language content",
+      "Automatic German-to-English translation with page number traceability for every extracted requirement",
+      "Semantic knowledge base enabling compliance evaluation of RFQ requirements against Bosch product specifications",
+      "Verdict generation per RFQ row with source citations — no invented content, full traceability to uploaded Bosch documents",
+      "Standardized, structured output across all customer formats enabling faster comparison and gap identification",
+      "Early visibility into compliance gaps and risks during the quotation phase"
+    ],
+    "successCriteria": [
+      "99.8%+ extraction completeness maintained across all 34 supported customer RFQ formats",
+      "BoM generation with accurate pricing and currency conversion validated by quotation teams",
+      "Adoption by sales engineers and quotation teams as the primary RFQ processing tool",
+      "Accurate semantic search and verdict generation validated against manual expert evaluations",
+      "Measurable reduction in RFQ intake and quotation preparation time",
+      "Zero hallucinated content — all verdicts traceable to source documents with citations"
+    ]
   }
 ]
