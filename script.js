@@ -97,29 +97,39 @@ const fallbackProjects = [
   },
   {
     "id": "ai-drbfm",
-    "title": "AI-Based DRBFM \u2013 Sensor Product Engineering",
+    "title": "IRIS \u2013 AI-Assisted DRBFM",
     "category": "AI",
-    "summary": "An AI-assisted DRBFM tool trained on Bosch reference documents that enables novice engineers to draft structured risk analyses and expert engineers to validate efficiently \u2014 dramatically reducing lead times for 30+ annual design changes in automotive sensor products.",
-    "impact": "30+ DRBFMs/year accelerated | L1-grade outputs without 5+ years experience",
+    "summary": "IRIS (Impact, Risk, Identification and Solving) \u2014 a 4-agent AI platform with a 6-step guided workflow that transforms DRBFM draft preparation from 3 weeks to 1 week, with source citations and mandatory expert validation. Nominated for Bosch People Awards 2026 (AI in Operations). Scaling across PS-GH and PS-DC R&D teams.",
+    "impact": "DRBFM draft: 3 weeks \u2192 1 week | 4 specialized AI agents | Nominated for People Awards 2026",
     "period": "2024 \u2013 Present",
     "organization": "Bosch Ltd",
-    "problem": "Bosch supplies automotive sensors (RPM, pressure, temperature, crankshaft) to major OEMs worldwide. These sensors are assembled in inaccessible areas of the vehicle engine bay, and OEMs will not modify their engine layout to accommodate sensor fitment. This forces Bosch to execute frequent design changes, resulting in 30+ DRBFMs annually. Traditionally, conducting a DRBFM requires L1 certification and 5+ years of product-line experience, creating a bottleneck where only a handful of senior engineers can author them. This leads to long lead times, dependency on limited experts, and delays in product development cycles.",
-    "solution": "An AI-assisted DRBFM platform trained on several Bosch DRBFM reference documents. Using Azure OpenAI GPT-5.2 with embeddings and MongoDB Atlas as a vector database, the system enables novice engineers to draft structured, high-quality DRBFM outputs by retrieving relevant failure modes, design concerns, and countermeasures from historical data. A SerpAPI integration provides external perspectives on design changes, enriching the analysis with industry-wide insights. Expert engineers can then peer-review and validate efficiently, reducing the overall cycle time significantly.",
+    "problem": "Before any DRBFM risk discussion, engineers had to manually interpret requirements, drawings, documents, application conditions, past DRBFMs and expert inputs \u2014 taking approximately 3 weeks to prepare an initial draft. Engineering evidence was scattered across documents, drawings, sheets and old DRBFMs. Information had to be pulled together by hand for every review. The depth of the first draft hinged entirely on individual experience and expert availability. Insights from previous DRBFMs were hard to retrieve and apply. Every design change needs a DRBFM, so slow preparation delayed the review and ultimately the release.",
+    "solution": "IRIS (Impact \u00b7 Risk \u00b7 Identification and Solving) connects engineering evidence and AI-assisted reasoning in one traceable, 6-step guided workflow: Set Context \u2192 Select Evidence \u2192 Impact Analysis \u2192 Risk Finding \u2192 Risk Matrix \u2192 Risk Solving \u2014 with source citations throughout. Four specialized AI agents power the platform: an Ingestion Agent that retrieves relevant information from engineering evidence, an Impact Agent that identifies functions affected by a design change, a Risk Finding Agent that explores possible failure modes, and a Risk Solving Agent that supports causes and actions for each identified risk. Historical DRBFM knowledge is reused, not lost. All AI recommendations come with source citations and mandatory expert validation \u2014 AI prepares, experts decide. The tool is product-agnostic by design, allowing it to scale across all PS-IN products.",
+    "modules": [
+      { "name": "Ingestion Agent", "description": "Retrieves relevant information from engineering evidence \u2014 documents, drawings, past DRBFMs, application conditions" },
+      { "name": "Impact Agent", "description": "Identifies the functions affected by a design change, tracing each change to connected components" },
+      { "name": "Risk Finding Agent", "description": "Explores possible failure modes across the design, providing a broader view of risks with historical context" },
+      { "name": "Risk Solving Agent", "description": "Supports causes and actions for each identified risk, with source-linked suggestions wherever evidence is available" }
+    ],
     "technologies": ["Azure OpenAI", "GPT-5.2", "Embeddings", "MongoDB Atlas Vector DB", "React", "SerpAPI", "Python"],
-    "users": "Sensor Product Engineers, Design Engineers, DRBFM Reviewers",
+    "users": "PS-SB/ENC-IN Product Engineers, L1\u2013L4 DRBFM Certified Engineers, Design Engineers. Scaling across PS-GH and PS-DC R&D teams in India and Germany",
     "results": [
-      "Enabled novice engineers to draft L1-grade structured DRBFM outputs without 5+ years of experience",
-      "Reduced DRBFM lead time significantly across 30+ annual design changes",
-      "Accelerated engineering response and faster product development cycles",
-      "Standardized, knowledge-driven risk analysis grounded in Bosch reference documents",
-      "External design change perspectives via SerpAPI integration for enriched analysis"
+      "Reduced initial DRBFM draft preparation time from 3 weeks to 1 week",
+      "Non-L1 engineers can now prepare DRBFM drafts with improved engineering depth \u2014 L1/L2 experts review and decide",
+      "4 specialized AI agents deliver structured risk analysis with source citations and mandatory expert validation",
+      "6-step guided workflow: Set Context \u2192 Select Evidence \u2192 Impact Analysis \u2192 Risk Finding \u2192 Risk Matrix \u2192 Risk Solving",
+      "Historical DRBFM knowledge reused across projects \u2014 knowledge grows with every design review",
+      "Product-agnostic architecture enables scaling across all PS-IN products",
+      "Nominated for Bosch People Awards 2026 in AI in Operations category",
+      "Under evaluation across PS-GH and PS-DC R&D teams; closely working with AI@DRBFM team in Germany and India"
     ],
     "successCriteria": [
-      "Measurable reduction in DRBFM authoring time per design change",
-      "High-quality DRBFM outputs validated by L1-certified expert reviewers",
-      "Adoption by novice engineers across sensor product engineering teams",
-      "Faster time-to-market for sensor design changes driven by OEM requirements",
-      "Consistent, repeatable risk analysis quality across all 30+ annual DRBFMs"
+      "DRBFM draft preparation time reduced from 3 weeks to 1 week, validated by user feedback",
+      "High-quality AI outputs validated by L1-certified expert reviewers with source citations",
+      "Adoption by non-L1 engineers for draft preparation, freeing expert time for validation and decisions",
+      "Scaling across PS-GH, PS-DC and additional R&D teams in India and Germany",
+      "Reusable engineering knowledge base that grows with every DRBFM project",
+      "Repeatable foundation for faster releases and safer engineering decisions across product lines"
     ]
   },
   {
