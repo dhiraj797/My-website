@@ -456,7 +456,7 @@ const fallbackProjects = [
     "title": "Agentic AI Customer Intelligence Platform",
     "category": "AI",
     "summary": "An agentic AI platform that ingests and classifies stakeholder emails from SQW (field quality) and Sales teams across 3 OEMs (Tata, MSIL, M&M), scoring each thread on 8 polarity dimensions to give C-suite leaders a real-time, citation-backed intelligence briefing — replacing reactive, post-mortem analysis with early-warning alerts and a centralized, searchable knowledge base per OEM.",
-    "impact": "3 OEMs onboarded | 309 threads scored | 8 scoring dimensions | PoC → Production transition",
+    "impact": "3 OEMs onboarded | 8 scoring dimensions | Productionized with automated daily pipelines",
     "period": "2025 – Present",
     "organization": "Bosch Ltd",
     "problem": "Bosch management visiting OEM customers had no structured way to prepare on current burning issues. Customer intelligence was scattered across individual email threads in SQW (field complaints / downstream quality) and Sales (upstream topics like acquisitions, commercial negotiations) teams. Issues surfaced only after escalation, subtle sentiment shifts went unnoticed for months, communication knowledge was tribal and fragmented across reps, and there was no shared analytical framework — leading to inconsistent, post-mortem analysis rather than proactive relationship management.",
@@ -471,7 +471,7 @@ const fallbackProjects = [
     "technologies": ["Agentic AI", "Power Automate", "Azure Blob", "Neo4j", "Vector Database", "Python", "React"],
     "users": "C-Suite Leaders, Senior Management, Sales Leadership, SQW (Quality) Leadership — for OEM visit preparation and strategic relationship management",
     "results": [
-      "3 OEMs onboarded (Tata, MSIL, M&M) with 309 email threads processed and scored across Quality and Sales dimensions",
+      "3 OEMs onboarded (Tata, MSIL, M&M) with continuous email thread scoring across Quality and Sales dimensions",
       "Early-warning alerts fire the moment sentiment or risk shifts — replacing late signal detection that surfaced issues only after escalation",
       "Continuous 8-dimension scoring tracks customer preference and strategy shifts in real time — eliminating months of missed early indicators",
       "One centralized, searchable intelligence base per OEM — replacing scattered communication and tribal knowledge across reps",
