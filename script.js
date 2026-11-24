@@ -13,7 +13,7 @@ const fallbackProjects = [
     "period": "2023 \u2013 Present",
     "organization": "Bosch Ltd",
     "problem": "CMD and SCP processes for price change calculation (PCR) and volume planning were managed through manual, Excel-based workflows. This led to limited end-to-end visibility across Contracts, Plans (TBP/CF), and Actuals, high manual effort and dependency on individual knowledge, inconsistent and non-repeatable PCR and volume calculations, delays in TBP and CF cycles, and limited auditability and explainability of price and volume deviations.",
-    "solution": "CRISP is a system-driven, integrated digital platform that automates PCR and SCP workflows. It introduces a structured Plan vs Actual explanation framework (Target Cross) to clearly separate and explain price and volume deviations. The platform enables seamless traceability across the value chain: Contracts (Quotation, LOI, PO) \u2192 Plan (TBP, CF) \u2192 Actuals (YEC, POE billing prices).",
+    "solution": "CRISP is a system-driven, integrated digital platform that automates PCR and SCP workflows. It introduces a structured Plan vs Actual explanation framework (Target Cross) to clearly separate and explain price and volume deviations. The platform enables seamless traceability across the value chain: Contracts (Quotation, LOI, PO) \u2192 Plan (TBP, CF) \u2192 Actuals (YEC, POE billing prices).Currently price change and forecasting happens through this platform for 34 + OE customers",
     "modules": [
       { "name": "MDM", "description": "Add/Update Master Data \u2013 centralized management of all master data entities" },
       { "name": "Parts", "description": "Customer Code, Import Content, Materials, Energy, Discounts (Volume / Year-on-Year / Combined bands), Contracts (Read-Only)" },
@@ -22,7 +22,7 @@ const fallbackProjects = [
       { "name": "Reconciliations", "description": "Rates (Forex, Material, Energy), Schedules, Parts with Approval Workflow (Pending Approvals \u2192 Pending PO \u2192 Pending GPM \u2192 History)" },
       { "name": "Forecasting", "description": "Schedules (CF Cycles/Year) with View/Update, CF Cycles with Manual Override, Download Price Forecasting Excel" }
     ],
-    "technologies": ["Python", "Power BI", "Power Automate", "Azure", "Data Analytics"],
+    "technologies": ["Python", "AG Grid", "Power Automate", "Angular", "Data Analytics"],
     "users": "Sales KAMs, SCP-IN team, PS-IN/RGB, rBUs, CTG-IN",
     "results": [
       "Digitized and automated end-to-end CMD and SCP workflows, eliminating manual Excel-based processes",
@@ -698,6 +698,44 @@ window.addEventListener('scroll', () => {
 
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ==========================================
+// Scroll Animations
+// ==========================================
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.section, .hero').forEach(section => {
+  section.classList.add('fade-in');
+  fadeObserver.observe(section);
+});
+
+// ==========================================
+// Active Nav Link Highlighting
+// ==========================================
+const navLinksAll = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
+    if (window.scrollY >= top) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinksAll.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
 });
 
 // ==========================================

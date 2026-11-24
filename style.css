@@ -98,8 +98,13 @@ a:hover {
   transition: color var(--transition);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--primary);
+}
+
+.nav-links a.active {
+  font-weight: 700;
 }
 
 .nav-toggle {
@@ -299,6 +304,20 @@ a:hover {
 }
 
 /* ==========================================
+   Scroll Animations
+   ========================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
    About
    ========================================== */
 .about-content p {
@@ -382,6 +401,10 @@ a:hover {
   color: var(--text-light);
   margin-bottom: 16px;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-card .card-impact {
@@ -742,11 +765,13 @@ a:hover {
   padding: 24px;
   text-align: center;
   transition: all var(--transition);
+  border-top: 3px solid var(--primary);
 }
 
 .achievement-card:hover {
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-top-color: var(--primary-dark);
 }
 
 .achievement-icon {
@@ -949,6 +974,11 @@ a:hover {
 
   .hero-name {
     font-size: 2.2rem;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .hero-stats {
