@@ -415,5 +415,35 @@
       "Measurable reduction in RFQ intake and quotation preparation time",
       "Zero hallucinated content — all verdicts traceable to source documents with citations"
     ]
+  },
+  {
+    "id": "dbc-req-generator",
+    "title": "DBC → Requirements Document Generator",
+    "category": "Digital Transformation",
+    "summary": "A web application that converts customer DBC files into draft CAN requirement specifications in the Bosch Word template — reducing document preparation from ~10 days to ~2 days (~80% effort reduction) with built-in DBC quality checks and consistent, error-free output.",
+    "impact": "~80% effort reduction per document | 10 days → 2 days | Built-in DBC quality checks",
+    "period": "2024 – Present",
+    "organization": "Bosch Ltd",
+    "problem": "Some OEMs send their CAN communication requirements only as a DBC file, with no requirements document. Before development can start, a Bosch 2WP engineer has to read every message and signal and write the CAN requirement specification by hand. For one vehicle network that takes about 10 working days. The work is repetitive and easy to get wrong: bit positions, ranges, default and invalid values are all copied by hand, leading to errors that propagate into development.",
+    "solution": "A web application that turns the customer DBC into a draft CAN requirement specification in the Bosch Word template. The engineer uploads the DBC file in the browser, chooses the ECU(s) to document (e.g. ABS, or all ECUs), marks messages as same-as-general-spec or not-requested where needed, and downloads the Word document. For each ECU the document is split into Transmit and Receive messages and signals. For every message it lists the transmitter, receivers, periodicity and DLC. For every signal it lists unit, range, resolution, invalid values, byte/bit layout, default value and value tables. The table of contents, header, footer and cover page are filled in automatically. The tool also performs a DBC quality check — listing problems such as overlapping signals, ranges that don't fit the bit length, missing units and missing receivers — which can be raised with the OEM early.",
+    "technologies": ["Python", "React", "Azure", "GitHub Actions", "CI/CD"],
+    "users": "Bosch 2WP Engineers, System Engineers, CAN Communication Teams",
+    "results": [
+      "Draft preparation reduced from ~10 days to ~2 days — roughly 80% less effort per document",
+      "Fewer errors: every value is calculated directly from the DBC instead of being retyped by hand",
+      "Built-in DBC quality check automatically identifies overlapping signals, range/bit-length mismatches, missing units and missing receivers",
+      "DBC quality issues can be raised with the OEM early in the process, before development begins",
+      "Consistent output: every document follows the same Bosch template and structure, regardless of who generates it",
+      "Faster start of development: requirements are ready for review within days of receiving the DBC",
+      "Customer DBC files processed in memory and never stored, ensuring data security"
+    ],
+    "successCriteria": [
+      "~80% reduction in document preparation effort validated by 2WP engineering teams",
+      "Accurate extraction of all message and signal parameters from DBC files",
+      "Consistent Bosch Word template output across all generated documents",
+      "DBC quality issues identified and flagged before development begins",
+      "Adoption by 2WP engineers as the standard tool for CAN requirement specification generation",
+      "Secure processing with Bosch account authentication and MFA"
+    ]
   }
 ]
