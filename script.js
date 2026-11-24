@@ -450,6 +450,43 @@ const fallbackProjects = [
       "Adoption by 2WP engineers as the standard tool for CAN requirement specification generation",
       "Secure processing with Bosch account authentication and MFA"
     ]
+  },
+  {
+    "id": "agentic-customer-intelligence",
+    "title": "Agentic AI Customer Intelligence Platform",
+    "category": "AI",
+    "summary": "An agentic AI platform that ingests and classifies stakeholder emails from SQW (field quality) and Sales teams across 3 OEMs (Tata, MSIL, M&M), scoring each thread on 8 polarity dimensions to give C-suite leaders a real-time, citation-backed intelligence briefing — replacing reactive, post-mortem analysis with early-warning alerts and a centralized, searchable knowledge base per OEM.",
+    "impact": "3 OEMs onboarded | 309 threads scored | 8 scoring dimensions | PoC → Production transition",
+    "period": "2025 – Present",
+    "organization": "Bosch Ltd",
+    "problem": "Bosch management visiting OEM customers had no structured way to prepare on current burning issues. Customer intelligence was scattered across individual email threads in SQW (field complaints / downstream quality) and Sales (upstream topics like acquisitions, commercial negotiations) teams. Issues surfaced only after escalation, subtle sentiment shifts went unnoticed for months, communication knowledge was tribal and fragmented across reps, and there was no shared analytical framework — leading to inconsistent, post-mortem analysis rather than proactive relationship management.",
+    "solution": "An agentic AI platform that productionizes stakeholder-email data pipelines from PoC to production. Email data is collected via two pipelines: a one-time Power Automate backfill of 6 months of legacy mailbox history (since Jan 2025) to seed the knowledge base, and a daily scheduled bot (Power Automate, 11:30 PM) that auto-routes emails from specified customer domains through Outlook folders → OneDrive → Azure Blob (month-wise Excel files) → the platform. The platform ingests and classifies email threads, scoring each on 8 polarity dimensions across Quality and Sales contexts. Three views are provided: a Dashboard with OEM-level score snapshots and confidence ratings, a Portfolio view for strategic customer briefings (Tata, MSIL, M&M), and an Ask Engine for citation-backed Q&A with confidence scoring. The platform enables C-suite leaders to walk into OEM meetings fully prepared on current issues, sentiment trends, and relationship health.",
+    "modules": [
+      { "name": "Data Pipeline — Backfill", "description": "One-time Power Automate bulk load of 6-month email history from legacy mailboxes to seed the knowledge base and establish baseline OEM relationship scores" },
+      { "name": "Data Pipeline — Daily Bot", "description": "Automated nightly collection (11:30 PM) capturing emails from specified customer domains via Outlook → OneDrive → Azure Blob → Platform, with no manual email dumps required" },
+      { "name": "8-Dimension Polarity Scoring", "description": "Scores every email thread across 8 dimensions — including Response Velocity & Closure Discipline, Technical Authority & Problem-Solving Depth, Ownership Clarity & Governance Structure, Deal Progression & Program Velocity, Commercial Power & Value Positioning, and Customer Engagement Depth & Strategic Access" },
+      { "name": "Dashboard & Portfolio", "description": "OEM-level intelligence briefings with score snapshots, confidence ratings, overall summaries, and dimension-wise polarity charts for Quality and Sales contexts across Tata, MSIL, and M&M" },
+      { "name": "Ask Engine", "description": "Citation-backed Q&A interface enabling natural language queries across the OEM knowledge base with confidence scoring and source thread references" }
+    ],
+    "technologies": ["Agentic AI", "Power Automate", "Azure Blob", "Neo4j", "Vector Database", "Python", "React"],
+    "users": "C-Suite Leaders, Senior Management, Sales Leadership, SQW (Quality) Leadership — for OEM visit preparation and strategic relationship management",
+    "results": [
+      "3 OEMs onboarded (Tata, MSIL, M&M) with 309 email threads processed and scored across Quality and Sales dimensions",
+      "Early-warning alerts fire the moment sentiment or risk shifts — replacing late signal detection that surfaced issues only after escalation",
+      "Continuous 8-dimension scoring tracks customer preference and strategy shifts in real time — eliminating months of missed early indicators",
+      "One centralized, searchable intelligence base per OEM — replacing scattered communication and tribal knowledge across reps",
+      "Standardized analytical framework across the entire OEM portfolio — replacing inconsistent, post-mortem analysis",
+      "Automated daily email collection with clean data boundary — no manual email dumps from teams",
+      "C-suite leaders can walk into OEM management meetings fully prepared on current burning issues, sentiment trends, and relationship health"
+    ],
+    "successCriteria": [
+      "Successful transition from PoC to production with automated daily email pipelines",
+      "High adoption by C-suite and senior management for OEM visit preparation",
+      "8-dimension polarity scoring validated against actual relationship outcomes",
+      "Incremental knowledge base refresh operational with Neo4j + vector store",
+      "Automated re-scoring on new threads with alerting for sentiment shifts",
+      "Coverage extended across all strategic OEM accounts"
+    ]
   }
 ];
 
